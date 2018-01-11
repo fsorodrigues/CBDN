@@ -190,21 +190,22 @@ function yAxis(scale) {
 
 function mouseOver(d) {
 
-        tooltip.transition()
-               .duration(300)
-               .style("opacity", 0.9);
-
         tooltip.html("<p><b>" + d.sport + "</b> | "
                     + d.discipline + " (" + d.genre.toLowerCase() + ")</p>"
                     + "<p>Competitividade: " + formatNum(d.competitiveness) + "</p>"
                     + "<p>Viabilidade: " + formatNum(d.viability) + "</p>")
-                .style("left", (d3.event.pageX + 10) + "px")
-                .style("top", (d3.event.pageY - 28) + "px");
+                .style("left", scaleX(d.competitiveness) + 120 + "px")
+                .style("top", scaleY(d.viability) + 10 + "px");
+
+        tooltip.transition()
+               .duration(50)
+               .style("opacity", 0.9);
               };
 
 function mouseOut() {
-        tooltip.transition()
-               .duration(50)
+
+        tooltip.style("left", 0)
+               .style("top", 0)
                .style("opacity", 0);
               };
 
