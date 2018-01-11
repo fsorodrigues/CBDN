@@ -195,7 +195,7 @@ function mouseOver(d) {
                .style("opacity", 0.9);
 
         tooltip.html("<p><b>" + d.sport + "</b> | "
-                    + d.discipline + "</p>"
+                    + d.discipline + " | " + d.genre + "</p>"
                     + "<p>Competitividade: " + formatNum(d.competitiveness) + "</p>"
                     + "<p>Viabilidade: " + formatNum(d.viability) + "</p>")
                 .style("left", (d3.event.pageX + 10) + "px")
