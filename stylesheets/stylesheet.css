@@ -1,0 +1,11 @@
+.tooltip {
+  position: absolute;
+  background-color: lightgrey;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+p {
+  margin: 0;
+  line-height: 1.5rem;
+}
